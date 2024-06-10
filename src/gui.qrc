@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>menu-indicator/basic_arrow.png</file>
+        <file>menu-indicator/black_arrow.png</file>
+        <file>menu-indicator/dark_arrow.png</file>
+        <file>menu-indicator/light_arrow.png</file>
+        <file>menu-indicator/no_arrow.png</file>
+    </qresource>
+</RCC>

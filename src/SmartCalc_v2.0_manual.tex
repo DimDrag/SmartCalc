@@ -1,0 +1,264 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\usepackage[russian]{babel}
+\begin{document}
+
+\subsection{Документация проекта SmartCalcv
+1.0}\label{ux434ux43eux43aux443ux43cux435ux43dux442ux430ux446ux438ux44f-ux43fux440ux43eux435ux43aux442ux430-smartcalcv-1.0}
+
+\begin{itemize}
+\tightlist
+\item
+  Приложение поддерживает три режима - \textbf{стандартный (smart
+  calc)}, \textbf{кредитный калькулятор (loan calc)} и
+  \textbf{депозитный калькулятор (deposit calc)}. Переключаться между
+  режимами можно с помощью клавиш F1, F2 и F3 соответственно.
+\end{itemize}
+
+\subparagraph{Режим Smart
+calc:}\label{ux440ux435ux436ux438ux43c-smart-calc}
+
+\begin{itemize}
+\item
+  Для ввода операндов и операторов можно пользоваться как мышью, так и
+  клавиатурой. Чтобы открыть подменю тригонометрических функций, можно
+  воспользоваться сочетанием клавиш Gtrl+T, остальных функций - Gtrl+F.
+  Чтобы закрыть упомянутые подменю, нужно нажать клавишу Esc.
+\item
+  Если при нажатии кнопки равно (=), в выражении допущена синтаксическая
+  ошибка (например, в выражении есть непарная скобка), в поле выражения
+  будет отображено ``SYNTAX ERROR''.
+\item
+  Если при нажатии кнопки равно (=), в выражении допущена математическая
+  ошибка (например, в выражении присутствует деление на ноль), в поле
+  выражения будет отображено ``MATH ERROR''.
+\item
+  В данном режиме есть возможность ввода переменной. После окончания
+  ввода математического выражения, следует нажать кнопку равно. Весь
+  лишний функционал пропадёт и пользователю будет предложено ввести
+  значение переменной. После ввода нужно так же нажать кнопку равно.
+\item
+  В данном режиме есть возможность просмотра графика введённого
+  выражения. Для этого нужно включить режим графика и начать ввод
+  выражения. График будет обновляться автоматически по мере ввода
+  выражения. Если введённое выражение некорректно - график будет
+  отображать функцию y=0.
+\item
+  Подробнее все сочетания клавиш описаны в списке ниже.
+\item
+  Список сочетаний клавиш:
+
+  \begin{longtable}[]{@{}
+    >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7895}}
+    >{\centering\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2105}}@{}}
+  \toprule\noalign{}
+  \begin{minipage}[b]{\linewidth}\raggedright
+  Действие
+  \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+  Сочетание клавиш
+  \end{minipage} \\
+  \midrule\noalign{}
+  \endhead
+  \bottomrule\noalign{}
+  \endlastfoot
+  Квадратный корень & S+Q+R+T \\
+  Возведение в степень & \^{} \\
+  Очистка поля выражения & Delete \\
+  Удаление одного оператора/операнда & Backspace \\
+  Открывающая скобка & ( \\
+  Закрывающая скобка & ) \\
+  Остаток от деления & M+O+D \\
+  Деление & / \\
+  Умножение & * \\
+  Сложение (в т.ч. унарное) & + \\
+  Вычитание (в т.ч. унарное) & - \\
+  Переменная X & x \\
+  Точка & . \\
+  Вычисление выражения & = \\
+  Включить режим графика & Ctrl+G \\
+  Открыть подменю тригонометрических функций & Ctrl+T \\
+  Открыть подменю других функций & Ctrl+F \\
+  Синус & S+I+N \\
+  Косинус & C+O+S \\
+  Тангенс & T+A+N \\
+  Арксинус & A+S+I+N \\
+  Арккосинус & A+C+O+S \\
+  Арктангенс & A+T+A+N \\
+  Десятичный логарифм & L+O+G \\
+  Натуральный логарифм & L+N \\
+  Переключение на режим \textbf{``Стандартный калькулятор'' (smart
+  calc)} & F1 \\
+  Переключение на режим \textbf{``Кредитный калькулятор'' (loan calc)} &
+  F2 \\
+  Переключение на режим \textbf{``Депозитный калькулятор'' (deposit
+  calc)} & F3 \\
+  \end{longtable}
+\end{itemize}
+
+\subparagraph{Режим Loan
+calc:}\label{ux440ux435ux436ux438ux43c-loan-calc}
+
+\begin{itemize}
+\item
+  Чтобы вычислить платежи, пользователю нужно заполнить следующие поля:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Loan type - вид платежей (аннуитетные/дифференцированные)
+  \item
+    Loan amount - начальное тело кредита
+  \item
+    Loan term - срок, на который берётся кредит
+  \item
+    Interest rate - процентная ставка
+  \end{itemize}
+\item
+  После заполнения упомянутых полей, нужно нажать кнопку Calculate. В
+  следующих полях будет отображен результат
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Monthly payment - ежемесячный платёж (при дифференцированном -
+    наибольший и наименьшие платежи)
+  \item
+    Total payment - общая выплата
+  \item
+    Total interest - переплата по кредиту
+  \item
+    В таблице ниже будет представлен список платежей, в котором указаны
+    номер и сумма платежа, а также остаток долга после платежа.
+  \end{itemize}
+\item
+  Список сочетаний клавиш:
+
+  \begin{longtable}[]{@{}lc@{}}
+  \toprule\noalign{}
+  Действие & Сочетание клавиш \\
+  \midrule\noalign{}
+  \endhead
+  \bottomrule\noalign{}
+  \endlastfoot
+  Вычислить & = \\
+  Очистить все поля & Delete \\
+  \end{longtable}
+\end{itemize}
+
+\subparagraph{Режим Deposit
+calc:}\label{ux440ux435ux436ux438ux43c-deposit-calc}
+
+\begin{itemize}
+\item
+  Чтобы вычислить выплаты, пользователю нужно заполнить следующие поля:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Initial - изначальная сумма вклада
+  \item
+    Length - срок размещения
+  \item
+    Interest rate - процентная ставка
+  \item
+    Tax rate - налоговая ставка (если нет - выставить значение 0)
+  \item
+    Compounding - периодичность выплат
+  \item
+    Capitalization - капитализация процентов
+  \item
+    Таблица ниже отвечает за пополнения и частичные снятия. Их
+    заполнение опционально.
+  \end{itemize}
+\item
+  После заполнения упомянутых полей, нужно нажать кнопку Calculate. В
+  следующих полях будет отображен результат.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Total interest - начисленные проценты
+  \item
+    Total tax - сумма налога
+  \item
+    Ending balance - сумма на вкладе к концу срока
+  \end{itemize}
+\item
+  Список сочетаний клавиш:
+
+  \begin{longtable}[]{@{}lc@{}}
+  \toprule\noalign{}
+  Действие & Сочетание клавиш \\
+  \midrule\noalign{}
+  \endhead
+  \bottomrule\noalign{}
+  \endlastfoot
+  Вычислить & = \\
+  Очистить все поля & Delete \\
+  \end{longtable}
+\end{itemize}
+
+\end{document}

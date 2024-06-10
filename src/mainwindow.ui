@@ -1,0 +1,2222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>402</width>
+    <height>640</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="palette">
+   <palette>
+    <active>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>36</red>
+        <green>35</green>
+        <blue>35</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Text">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="ButtonText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>141</red>
+        <green>141</green>
+        <blue>141</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>152</red>
+        <green>152</green>
+        <blue>152</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Highlight">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>23</red>
+        <green>66</green>
+        <blue>93</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </active>
+    <inactive>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>36</red>
+        <green>35</green>
+        <blue>35</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Text">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="ButtonText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>141</red>
+        <green>141</green>
+        <blue>141</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>152</red>
+        <green>152</green>
+        <blue>152</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Highlight">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>23</red>
+        <green>66</green>
+        <blue>93</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </inactive>
+    <disabled>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>36</red>
+        <green>35</green>
+        <blue>35</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>152</red>
+        <green>152</green>
+        <blue>152</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>152</red>
+        <green>152</green>
+        <blue>152</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </disabled>
+   </palette>
+  </property>
+  <property name="windowTitle">
+   <string>SmartCalc v2.0</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* QPushButton */
+QPushButton {
+	border: 2px solid transparent;
+	border-radius: 10px;
+	font: 300 18pt &quot;Ubuntu Light&quot;;
+    color: white;
+	background: rgb(30, 30, 30);
+}
+QPushButton:hover {
+    border:none;
+}
+QPushButton:pressed {
+    background:rgb(145, 48, 0);
+}
+QPushButton:checked {
+    background:rgb(145, 48, 0);
+}
+QPushButton:disabled {
+	color:rgb(30, 30, 30);
+}
+
+QMenu {
+	background-color: rgb(152, 152, 152);
+	border-radius: 10px;
+}
+QPushButton::menu-indicator {
+	image: url(&quot;:/img/menu-indicator/basic_arrow.png&quot;);
+    subcontrol-position: right center;
+    right: 5px;
+}
+QPushButton::menu-indicator:hover {
+	image: url(&quot;:/img/menu-indicator/light_arrow.png&quot;);
+    right: 7px;
+}
+QPushButton::menu-indicator:pressed {
+	image: url(&quot;:/img/menu-indicator/basic_arrow.png&quot;);
+    right: 7px;
+}
+
+/* QScrollBar */
+QScrollBar:horizontal {
+	height: 15px;
+	background: transparent;
+	margin-bottom: 1px;
+}
+QScrollBar::handle:horizontal {
+    background: black;
+}
+QScrollBar::add-line:horizontal {
+    background: transparent;
+}
+QScrollBar::sub-line:horizontal {
+    background: transparent;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="font">
+       <font>
+        <family>Ubuntu Light</family>
+        <pointsize>18</pointsize>
+        <italic>false</italic>
+       </font>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::StrongFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTabBar::tab {
+	border-left: 2px solid transparent;
+	border-right: 2px solid transparent;
+	border-bottom: 2px solid transparent;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	font: 300 18pt &quot;Ubuntu Light&quot;;
+    color: white;
+	background: rgb(30, 30, 30);
+}
+
+QTabBar::tab:selected {
+    background:rgb(145, 48, 0);
+}
+
+QTabBar::tab:hover{
+	border: none;
+}
+
+QTabWidget::pane {
+    border-top: 0px;
+}</string>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="usesScrollButtons">
+       <bool>false</bool>
+      </property>
+      <widget class="QWidget" name="smart_calc">
+       <attribute name="title">
+        <string> smart calc </string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>9</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QTextEdit" name="expressionField">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>70</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Ubuntu Light</family>
+            <pointsize>26</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background: lightgray;
+border-radius: 5px;
+padding: 10px 5px 0px 5px;</string>
+          </property>
+          <property name="lineWidth">
+           <number>0</number>
+          </property>
+          <property name="verticalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOff</enum>
+          </property>
+          <property name="undoRedoEnabled">
+           <bool>false</bool>
+          </property>
+          <property name="lineWrapMode">
+           <enum>QTextEdit::NoWrap</enum>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu Light'; font-size:26pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;right&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="textInteractionFlags">
+           <set>Qt::NoTextInteraction</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <property name="spacing">
+           <number>2</number>
+          </property>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout">
+            <item>
+             <widget class="QPushButton" name="btnTrigonometryMenu">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">padding: 10px, 10px, 0px, 0px;</string>
+              </property>
+              <property name="text">
+               <string>trigonometry</string>
+              </property>
+              <property name="shortcut">
+               <string>Ctrl+T</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnFunctionsMenu">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">padding: 10px, 10px, 0px, 0px;</string>
+              </property>
+              <property name="text">
+               <string>ƒ(x)</string>
+              </property>
+              <property name="shortcut">
+               <string>Ctrl+F</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnGraph">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="text">
+             <string>graph</string>
+            </property>
+            <property name="shortcut">
+             <string>Ctrl+G</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QGridLayout" name="gridLayout">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item row="1" column="0">
+           <widget class="QPushButton" name="btnBracketL">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="text">
+             <string>(</string>
+            </property>
+            <property name="shortcut">
+             <string>(</string>
+            </property>
+            <property name="lexemeName" stdset="0">
+             <string>bracketL</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QPushButton" name="btnClear">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="text">
+             <string>С</string>
+            </property>
+            <property name="shortcut">
+             <string>Del</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QPushButton" name="btnBracketR">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="text">
+             <string>)</string>
+            </property>
+            <property name="shortcut">
+             <string>)</string>
+            </property>
+            <property name="lexemeName" stdset="0">
+             <string>bracketR</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QPushButton" name="btnExp">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="text">
+             <string>EXP</string>
+            </property>
+            <property name="shortcut">
+             <string>E</string>
+            </property>
+            <property name="lexemeName" stdset="0">
+             <string>E</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="3">
+           <widget class="QPushButton" name="btnDot">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Ubuntu Light</family>
+              <pointsize>18</pointsize>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="text">
+             <string>.</string>
+            </property>
+            <property name="icon">
+             <iconset theme="address-book-new">
+              <normaloff>.</normaloff>.</iconset>
+            </property>
+            <property name="shortcut">
+             <string>.</string>
+            </property>
+            <property name="lexemeName" stdset="0">
+             <string>.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QPushButton" name="btnDigit7">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Ubuntu Light</family>
+              <pointsize>18</pointsize>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string>QPushButton {
+	background: rgb(50, 50, 50);
+}
+QPushButton:pressed {
+    background:rgb(89, 89, 89)
+}</string>
+            </property>
+            <property name="text">
+             <string>7</string>
+            </property>
+            <property name="shortcut">
+             <string>7</string>
+            </property>
+            <property name="lexemeName" stdset="0">
+             <string>7</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="3">
+           <widget class="QPushButton" name="btnDigit3">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Ubuntu Light</family>
+              <pointsize>18</pointsize>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+	background: rgb(50, 50, 50);
+}
+QPushButton:pressed {
+    background:rgb(89, 89, 89)
+}</string>
+            </property>
+            <property name="text">
+             <string>3</string>
+            </property>
+            <property name="shortcut">
+             <string>3</string>
+            </property>
+            <property name="lexemeName" stdset="0">
+             <string>3</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="5">
+           <widget class="QPushButton" name="btnPlus">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="text">
+             <string>+</string>
+            </property>
+            <property name="shortcut">
+             <string>+</string>
+            </property>
+            <property name="lexemeName" stdset="0">
+             <string>plus</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3">
+           <widget class="QPushButton" name="btnX">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="text">
+             <string>X</string>
+            </property>
+            <property name="shortcut">
+             <string>X</string>
+            </property>
+            <property name="lexemeName" stdset="0">
+             <string>variable</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QPushButton" name="btnDigit4">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Ubuntu Light</family>
+              <pointsize>18</pointsize>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+	background: rgb(50, 50, 50);
+}
+QPushButton:pressed {
+    background:rgb(89, 89, 89)
+}</string>
+            </property>
+            <property name="text">
+             <string>4</string>
+            </property>
+            <property name="shortcut">
+             <string>4</string>
+            </property>
+            <property name="lexemeName" stdset="0">
+             <string>4</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="5">
+           <widget class="QPushButton" name="btnMinus">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="text">
+             <string>-</string>
+            </property>
+            <property name="shortcut">
+             <string>-</string>
+            </property>
+            <property name="lexemeName" stdset="0">
+             <string>minus</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="5">
+           <widget class="QPushButton" name="btnMul">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="text">
+             <string>×</string>
+            </property>
+            <property name="shortcut">
+             <string>*</string>
+            </property>
+            <property name="lexemeName" stdset="0">
+             <string>mul</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="2">
+           <widget class="QPushButton" name="btnDigit0">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Ubuntu Light</family>
+              <pointsize>18</pointsize>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+	background: rgb(50, 50, 50);
+}
+QPushButton:pressed {
+    background:rgb(89, 89, 89)
+}</string>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+            <property name="shortcut">
+             <string>0</string>
+            </property>
+            <property name="lexemeName" stdset="0">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="3">
+           <widget class="QPushButton" name="btnDigit6">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Ubuntu Light</family>
+              <pointsize>18</pointsize>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+	background: rgb(50, 50, 50);
+}
+QPushButton:pressed {
+    background:rgb(89, 89, 89)
+}</string>
+            </property>
+            <property name="text">
+             <string>6</string>
+            </property>
+            <property name="shortcut">
+             <string>6</string>
+            </property>
+            <property name="lexemeName" stdset="0">
+             <string>6</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="5">
+           <widget class="QPushButton" name="btnDiv">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="text">
+             <string>÷</string>
+            </property>
+            <property name="shortcut">
+             <string>/</string>
+            </property>
+            <property name="lexemeName" stdset="0">
+             <string>div</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QPushButton" name="btnPow">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="text">
+             <string>pow</string>
+            </property>
+            <property name="shortcut">
+             <string>^</string>
+            </property>
+            <property name="lexemeName" stdset="0">
+             <string>pow</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="5">
+           <widget class="QPushButton" name="btnDelete">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="text">
+             <string>⌫</string>
+            </property>
+            <property name="shortcut">
+             <string>Backspace</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="2">
+           <widget class="QPushButton" name="btnDigit5">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Ubuntu Light</family>
+              <pointsize>18</pointsize>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+	background: rgb(50, 50, 50);
+}
+QPushButton:pressed {
+    background:rgb(89, 89, 89)
+}</string>
+            </property>
+            <property name="text">
+             <string>5</string>
+            </property>
+            <property name="shortcut">
+             <string>5</string>
+            </property>
+            <property name="lexemeName" stdset="0">
+             <string>5</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="2">
+           <widget class="QPushButton" name="btnDigit2">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Ubuntu Light</family>
+              <pointsize>18</pointsize>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+	background: rgb(50, 50, 50);
+}
+QPushButton:pressed {
+    background:rgb(89, 89, 89)
+}</string>
+            </property>
+            <property name="text">
+             <string>2</string>
+            </property>
+            <property name="shortcut">
+             <string>2</string>
+            </property>
+            <property name="lexemeName" stdset="0">
+             <string>2</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QPushButton" name="btnDigit1">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Ubuntu Light</family>
+              <pointsize>18</pointsize>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+	background: rgb(50, 50, 50);
+}
+QPushButton:pressed {
+    background:rgb(89, 89, 89)
+}</string>
+            </property>
+            <property name="text">
+             <string>1</string>
+            </property>
+            <property name="shortcut">
+             <string>1</string>
+            </property>
+            <property name="lexemeName" stdset="0">
+             <string>1</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QPushButton" name="btnSqrt">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="text">
+             <string>√</string>
+            </property>
+            <property name="shortcut">
+             <string>S, Q, R, T</string>
+            </property>
+            <property name="lexemeName" stdset="0">
+             <string>sqrt</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="5">
+           <widget class="QPushButton" name="btnEqual">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+	background: rgb(33, 33, 100);
+}
+QPushButton:pressed {
+	background: rgb(43, 43, 131);
+}
+
+QPushButton:disabled {
+	color: rgb(33, 33, 100);
+}</string>
+            </property>
+            <property name="text">
+             <string>=</string>
+            </property>
+            <property name="shortcut">
+             <string>=</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="3">
+           <widget class="QPushButton" name="btnDigit9">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Ubuntu Light</family>
+              <pointsize>18</pointsize>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+	background: rgb(50, 50, 50);
+}
+QPushButton:pressed {
+    background:rgb(89, 89, 89)
+}</string>
+            </property>
+            <property name="text">
+             <string>9</string>
+            </property>
+            <property name="shortcut">
+             <string>9</string>
+            </property>
+            <property name="lexemeName" stdset="0">
+             <string>9</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="2">
+           <widget class="QPushButton" name="btnDigit8">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Ubuntu Light</family>
+              <pointsize>18</pointsize>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+	background: rgb(50, 50, 50);
+}
+QPushButton:pressed {
+    background:rgb(89, 89, 89)
+}</string>
+            </property>
+            <property name="text">
+             <string>8</string>
+            </property>
+            <property name="shortcut">
+             <string>8</string>
+            </property>
+            <property name="lexemeName" stdset="0">
+             <string>8</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="loan_calc">
+       <property name="styleSheet">
+        <string notr="true">LoanCalc {
+	background: rgb(152, 152, 152);
+}
+QTableWidget {
+	font: 300 14pt &quot;Ubuntu Light&quot;;
+	border-radius: 10px;
+	background: rgb(211, 211, 211);
+}
+/* QPushButton */
+QPushButton {
+	border: 2px solid transparent;
+	border-radius: 10px;
+	font: 300 18pt &quot;Ubuntu Light&quot;;
+    color: white;
+	background: rgb(30, 30, 30);
+}
+QPushButton:hover {
+    border:none;
+}
+QPushButton:pressed {
+    background:rgb(145, 48, 0);
+}
+/*QLabel*/
+QLabel {
+	font: 300 18pt &quot;Ubuntu Light&quot;;
+    color: black;
+}
+/* QRadioButton */
+QRadioButton {
+	border: 2px solid transparent;
+	border-radius: 10px;
+	font: 300 18pt &quot;Ubuntu Light&quot;;
+    color: white;
+	background: rgb(30, 30, 30);
+}
+QRadioButton:hover {
+	padding-left: 2px;
+    border:none;
+}
+QRadioButton:pressed {
+    background:rgb(145, 48, 0);
+}
+QRadioButton:checked {
+    background:rgb(145, 48, 0);
+}
+QLineEdit {
+	font: 300 18pt &quot;Ubuntu Light&quot;;
+	background: lightgray;
+	border-radius: 5px;
+}
+QGroupBox {
+	font: 300 18pt &quot;Ubuntu Light&quot;;
+}
+
+/*QComboBox*/
+QComboBox {
+	border: 2px solid transparent;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	font: 300 18pt &quot;Ubuntu Light&quot;;
+    color: white;
+	background: rgb(30, 30, 30);
+	padding-left: 10px;
+}
+QComboBox:hover {
+	padding-left:12px;
+    border:none;
+}
+QComboBox QAbstractItemView {
+    selection-background-color: darkgray;
+	padding-left: 5px;
+	background: rgb(152, 152, 152);
+    color: black;
+}</string>
+       </property>
+       <attribute name="title">
+        <string> loan calc </string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item row="3" column="1">
+         <widget class="QLineEdit" name="interestRateEdit">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>Interest rate</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="1" colspan="2">
+         <widget class="QLineEdit" name="totalInterestField">
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QComboBox" name="loanTermBox">
+          <property name="styleSheet">
+           <string notr="true">/*QComboBox*/
+QComboBox {
+	border: 2px solid transparent;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	font: 300 18pt &quot;Ubuntu Light&quot;;
+    color: white;
+	background: rgb(30, 30, 30);
+	padding-left: 10px;
+}
+QComboBox:hover {
+	padding-left:12px;
+    border:none;
+}
+QComboBox QAbstractItemView {
+    selection-background-color: darkgray;
+	padding-left: 5px;
+	background: rgb(152, 152, 152);
+    color: black;
+}</string>
+          </property>
+          <property name="insertPolicy">
+           <enum>QComboBox::NoInsert</enum>
+          </property>
+          <property name="frame">
+           <bool>false</bool>
+          </property>
+          <item>
+           <property name="text">
+            <string>months</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>years</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="4" column="0" colspan="2">
+         <widget class="QPushButton" name="btnCalcLoan">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="focusPolicy">
+           <enum>Qt::NoFocus</enum>
+          </property>
+          <property name="text">
+           <string>Calculate</string>
+          </property>
+          <property name="shortcut">
+           <string>=</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="1" colspan="2">
+         <widget class="QLineEdit" name="totalPaymentField">
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="0" colspan="3">
+         <widget class="QTableWidget" name="paymentTable">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="lineWidth">
+           <number>0</number>
+          </property>
+          <property name="verticalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOff</enum>
+          </property>
+          <property name="horizontalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOff</enum>
+          </property>
+          <property name="editTriggers">
+           <set>QAbstractItemView::NoEditTriggers</set>
+          </property>
+          <property name="selectionMode">
+           <enum>QAbstractItemView::NoSelection</enum>
+          </property>
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="verticalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>№</string>
+           </property>
+           <property name="font">
+            <font>
+             <family>Ubuntu Light</family>
+             <pointsize>14</pointsize>
+            </font>
+           </property>
+           <property name="background">
+            <color>
+             <red>152</red>
+             <green>152</green>
+             <blue>152</blue>
+            </color>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Payment</string>
+           </property>
+           <property name="font">
+            <font>
+             <family>Ubuntu Light</family>
+             <pointsize>14</pointsize>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="background">
+            <color>
+             <red>152</red>
+             <green>152</green>
+             <blue>152</blue>
+            </color>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Ending Balance</string>
+           </property>
+           <property name="font">
+            <font>
+             <family>Ubuntu Light</family>
+             <pointsize>14</pointsize>
+            </font>
+           </property>
+           <property name="background">
+            <color>
+             <red>152</red>
+             <green>152</green>
+             <blue>152</blue>
+            </color>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item row="4" column="2">
+         <widget class="QPushButton" name="btnClearLoan">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="focusPolicy">
+           <enum>Qt::NoFocus</enum>
+          </property>
+          <property name="text">
+           <string>Clear</string>
+          </property>
+          <property name="shortcut">
+           <string>Del</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="0">
+         <widget class="QLabel" name="label_5">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Total Interest</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>Loan term</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="0">
+         <widget class="QLabel" name="label_7">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Total payment</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" colspan="3">
+         <widget class="QGroupBox" name="groupBox">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="title">
+           <string>Loan type</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QRadioButton" name="btnAmortizedLoan">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="focusPolicy">
+              <enum>Qt::NoFocus</enum>
+             </property>
+             <property name="text">
+              <string>Amortized</string>
+             </property>
+             <property name="shortcut">
+              <string>Ctrl+A</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="btnDifferentialLoan">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="focusPolicy">
+              <enum>Qt::NoFocus</enum>
+             </property>
+             <property name="text">
+              <string>Differential</string>
+             </property>
+             <property name="shortcut">
+              <string>Ctrl+D</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="1" column="1" colspan="2">
+         <widget class="QLineEdit" name="loanAmountEdit"/>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="loanTermEdit">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="label_6">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Monthly payment</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="2">
+         <widget class="QLabel" name="label_4">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>%</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1" colspan="2">
+         <widget class="QLineEdit" name="monthlyPaymentField">
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>Loan amount</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="deposit_calc">
+       <property name="styleSheet">
+        <string notr="true">LoanCalc {
+	background: rgb(152, 152, 152);
+}
+/*QComboBox*/
+QComboBox {
+	border: 2px solid transparent;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	font: 300 18pt &quot;Ubuntu Light&quot;;
+    color: white;
+	background: rgb(30, 30, 30);
+	padding-left: 10px;
+}
+QComboBox:hover {
+	padding-left:12px;
+    border:none;
+}
+QComboBox QAbstractItemView {
+    selection-background-color: darkgray;
+	padding-left: 5px;
+	background: rgb(152, 152, 152);
+    color: black;
+}
+QTableWidget {
+	font: 300 14pt &quot;Ubuntu Light&quot;;
+	border-radius: 10px;
+	background: rgb(211, 211, 211);
+}
+/* QPushButton */
+QPushButton {
+	border: 2px solid transparent;
+	border-radius: 10px;
+	font: 300 18pt &quot;Ubuntu Light&quot;;
+    color: white;
+	background: rgb(30, 30, 30);
+}
+QPushButton:hover {
+    border:none;
+}
+QPushButton:pressed {
+    background:rgb(145, 48, 0);
+}
+/*QCheckBox*/
+QCheckBox {
+	font: 300 18pt &quot;Ubuntu Light&quot;;
+    color: black;
+}
+/*QLabel*/
+QLabel {
+	font: 300 18pt &quot;Ubuntu Light&quot;;
+    color: black;
+}
+/* QRadioButton */
+QRadioButton {
+	border: 2px solid transparent;
+	border-radius: 10px;
+	font: 300 18pt &quot;Ubuntu Light&quot;;
+    color: white;
+	background: rgb(30, 30, 30);
+}
+QRadioButton:hover {
+    border:none;
+}
+QRadioButton:pressed {
+    background:rgb(145, 48, 0);
+}
+QRadioButton:checked {
+    background:rgb(145, 48, 0);
+}
+QLineEdit {
+	font: 300 18pt &quot;Ubuntu Light&quot;;
+	background: lightgray;
+	border-radius: 5px;
+}
+QGroupBox {
+	font: 300 18pt &quot;Ubuntu Light&quot;;
+}
+
+/*QCalendarWidget*/
+QCalendarWidget QToolButton {
+	color: black;
+	font: 500 14pt &quot;Ubuntu Light&quot;;
+	background-color: rgb(152, 152, 152);
+}
+QCalendarWidget QMenu {
+	color: black;
+	font: 500 14pt &quot;Ubuntu Light&quot;;
+	background-color: rgb(100, 100, 100);
+	background-color: rgb(152, 152, 152);
+}
+   
+/* header row */
+QCalendarWidget QWidget {
+	alternate-background-color: black;
+}
+   
+/* normal days */
+QCalendarWidget QAbstractItemView:enabled  {
+	font-size:14px;
+	color: rgb(180, 180, 180);  
+	background-color: black;  
+	selection-background-color: rgb(64, 64, 64); 
+	/*selection-color: rgb(0, 255, 0); */
+}
+/* navigation bar */
+QCalendarWidget QWidget#qt_calendar_navigationbar {
+	color: black;
+	font: 500 14pt &quot;Ubuntu Light&quot;;
+	background-color: rgb(152, 152, 152);
+}
+/* days in other months */
+QCalendarWidget QAbstractItemView:disabled  { 
+	color: rgb(64, 64, 64); 
+}</string>
+       </property>
+       <attribute name="title">
+        <string> deposit calc </string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item row="15" column="0">
+         <widget class="QLabel" name="label_19">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Total tax</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QDateEdit" name="investmentDateEdit">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">/*QDateEdit*/
+QDateEdit {
+	background: lightgray;
+	font: 300 18pt &quot;Ubuntu Light&quot;;
+    color: black;
+	border-radius: 5px;
+}</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+          <property name="displayFormat">
+           <string>dd.MM.yyyy</string>
+          </property>
+          <property name="calendarPopup">
+           <bool>true</bool>
+          </property>
+          <property name="date">
+           <date>
+            <year>2023</year>
+            <month>11</month>
+            <day>16</day>
+           </date>
+          </property>
+         </widget>
+        </item>
+        <item row="12" column="0" colspan="2">
+         <widget class="QTableWidget" name="contributionTable">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">/*QDateEdit*/
+QDateEdit {
+	background: lightgray;
+	font: 300 14pt &quot;Ubuntu Light&quot;;
+    color: black;
+	border-radius: 5px;
+}
+QTableWidget::item {
+	selection-background-color: lightgray;
+}</string>
+          </property>
+          <property name="verticalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOff</enum>
+          </property>
+          <property name="horizontalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOff</enum>
+          </property>
+          <property name="rowCount">
+           <number>1</number>
+          </property>
+          <attribute name="horizontalHeaderVisible">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="verticalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+          <row/>
+          <column>
+           <property name="text">
+            <string>Date</string>
+           </property>
+           <property name="font">
+            <font>
+             <family>Ubuntu Light</family>
+             <pointsize>14</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="background">
+            <color>
+             <red>152</red>
+             <green>152</green>
+             <blue>152</blue>
+            </color>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Amount</string>
+           </property>
+           <property name="font">
+            <font>
+             <family>Ubuntu Light</family>
+             <pointsize>14</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="background">
+            <color>
+             <red>152</red>
+             <green>152</green>
+             <blue>152</blue>
+            </color>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item row="16" column="0">
+         <widget class="QLabel" name="label_17">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Ending balance</string>
+          </property>
+         </widget>
+        </item>
+        <item row="14" column="0">
+         <widget class="QLabel" name="label_11">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Total interest</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_10">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Initial</string>
+          </property>
+         </widget>
+        </item>
+        <item row="16" column="1">
+         <widget class="QLineEdit" name="endingBalanceField">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_29">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Term</string>
+          </property>
+         </widget>
+        </item>
+        <item row="10" column="0">
+         <widget class="QLabel" name="label_12">
+          <property name="text">
+           <string>Capitalization</string>
+          </property>
+         </widget>
+        </item>
+        <item row="14" column="1">
+         <widget class="QLineEdit" name="depositTotalInterestField">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_18">
+          <item>
+           <widget class="QLineEdit" name="depositInterestRateEdit">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_9">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>%</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="9" column="1">
+         <widget class="QComboBox" name="compoundingPeriodBox">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <item>
+           <property name="text">
+            <string>annually</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>semiannually</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>quarterly</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>monthly</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>daily</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>at the end</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="13" column="1">
+         <widget class="QPushButton" name="btnClearDeposit">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="focusPolicy">
+           <enum>Qt::NoFocus</enum>
+          </property>
+          <property name="text">
+           <string>Clear</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="initialInvestmentEdit">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="9" column="0">
+         <widget class="QLabel" name="label_21">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Compounding</string>
+          </property>
+         </widget>
+        </item>
+        <item row="13" column="0">
+         <widget class="QPushButton" name="btnCalcDeposit">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="focusPolicy">
+           <enum>Qt::NoFocus</enum>
+          </property>
+          <property name="text">
+           <string>Calculate</string>
+          </property>
+         </widget>
+        </item>
+        <item row="15" column="1">
+         <widget class="QLineEdit" name="totalTaxField">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="10" column="1">
+         <widget class="QCheckBox" name="capitalizationBox">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="11" column="0" colspan="2">
+         <widget class="QLabel" name="label_25">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Contributions &amp; Withdrawals</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_28">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Date</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_19">
+          <item>
+           <widget class="QLineEdit" name="investmentTermEdit">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="investmentTermBox">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <item>
+             <property name="text">
+              <string>months</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>years</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="7" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_20">
+          <item>
+           <widget class="QLineEdit" name="taxRateEdit">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_26">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>%</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="6" column="0">
+         <widget class="QLabel" name="label_30">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Interest rate</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="0">
+         <widget class="QLabel" name="label_27">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Tax rate</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
