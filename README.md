@@ -59,18 +59,18 @@ There is a special mode "deposit profitability calculator"
 
 ### Screenshots
 
-![1](/home/dmitrii/smth/CPP3_SmartCalc_v2.0-1/images/1.png)
+![1](./images/1.png)
 
 *Writing an expression*
 
-![2](/home/dmitrii/smth/CPP3_SmartCalc_v2.0-1/images/2.png)
+![2](./images/2.png)
 
 *Opened trigonometry menu*
 
-![4](/home/dmitrii/smth/CPP3_SmartCalc_v2.0-1/images/4.png)
+![4](./images/4.png)
 
 *Loan calc*
 
-![5](/home/dmitrii/smth/CPP3_SmartCalc_v2.0-1/images/5.png)
+![5](./images/5.png)
 
 *Deposit calc*
